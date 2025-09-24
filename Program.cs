@@ -12,9 +12,13 @@ class Program
         Console.WriteLine("Welcome dear customer to Northrend Smoothies!");
         Thread.Sleep(3000);
         Console.Clear();
+        
+        //selecting a fruit for the smoothie
         Console.Write("Please select a fruit for your smooothie! > ");
         string OptionalFruit = Console.ReadLine();
         Console.Clear();
+        
+        //selecting base material
         Console.WriteLine("Great, now what base would you like for your smoothie? \n 1. Milk \n 2. Water \n 3. Yoghurt");
         baseChoice = Console.ReadLine();
         
@@ -27,7 +31,8 @@ class Program
             Console.WriteLine("1. Milk\n2. Water\n3. Yoghurt");
             baseChoice = Console.ReadLine()?.Trim();
         }
-
+        
+        //setting basechoice to our smoothiebase parameter to be able to call it in the object
         string SmoothieBase = baseChoice switch
         {
             "1" => "Milk",
